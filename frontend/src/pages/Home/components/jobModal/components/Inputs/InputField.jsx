@@ -15,6 +15,13 @@ export default function InputField({
             fontSize: "12px",
           },
           marginTop: inputName === "title" ? 0 : "24px",
+          "& fieldset": {
+            "& legend": {
+              "& span": {
+                fontSize: "7px"
+              }
+            }
+          }
         }}
         InputLabelProps={{
           style: {

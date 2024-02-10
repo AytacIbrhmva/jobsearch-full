@@ -327,6 +327,11 @@
   font-size: 14px;
   border: none;
 }
+.job-list .list-loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
 .job-list .list-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -378,6 +383,22 @@
 .job-card .card-body {
   padding: 20px;
   padding-top: 10px;
+}
+.job-card .card-body .card-body-head {
+  display: flex;
+  justify-content: flex-end;
+}
+.job-card .card-body .card-body-head .edit-icon {
+  border-radius: 8px;
+  height: 38px;
+  background-color: rgb(231, 255, 231);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-left: 8px;
+}
+.job-card .card-body .card-body-head .edit-icon svg path {
+  stroke: rgb(16, 240, 24);
 }
 .job-card .card-body .card-title {
   margin-bottom: 10px;

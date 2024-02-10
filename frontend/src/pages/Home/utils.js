@@ -1,5 +1,5 @@
 export function useCustomHook() {
-  const departmentList = ["All", "Marketing", "IT", "Law"];
+  const departmentList = ["All", "Marketing", "IT", "Law", "Financial services", "Engineering", "Education and training"];
   const sortList = [
     { key: "default", name: "Default" },
     { key: "salaryMinToMax", name: "Salary min to max"},

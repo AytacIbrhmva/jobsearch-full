@@ -92,8 +92,10 @@ function List() {
       </div>
 
       {jobs.loading ? (
-        <div className="loading-con">
-          <img className="loading-img" src={LoadingIcon} alt="" />
+        <div className="list-loading">
+          <div className="loading-con">
+            <img className="loading-img" src={LoadingIcon} alt="" />
+          </div>
         </div>
       ) : (
         <div className="list-container">

@@ -28,7 +28,7 @@ function Single({ job }) {
     <div className="job-card">
       {/* <img className='card-top-img' src={job.company.thumb} alt="company img"/> */}
       <div className="card-body">
-        <div className="card-head">
+        <div className="card-body-head">
           <div className="delete-icon" onClick={() => deleteJob()}><DeleteIcon /></div>
           <div className="edit-icon" onClick={() => updateJob()}><EditIcon /></div>
         </div>

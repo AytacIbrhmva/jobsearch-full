@@ -350,6 +350,11 @@
             }
         }
     }
+    .list-loading {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
     .list-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -408,6 +413,24 @@
     .card-body {
         padding: 20px;
         padding-top: 10px;
+        .card-body-head {
+            display: flex;
+            justify-content: flex-end;
+            .edit-icon {
+                border-radius: 8px;
+                height: 38px;
+                background-color: rgb(231, 255, 231);
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                margin-left: 8px;
+                svg {
+                    path {
+                        stroke: rgb(16, 240, 24);
+                    }
+                }
+            }
+        }
         .card-title {
             margin-bottom: 10px;
             .title {

@@ -28,7 +28,7 @@
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 22px;
+  /* margin-bottom: 22px; */
 }
 
 .create-update-modal-head svg {
@@ -304,7 +304,7 @@
   padding: 8px 24px;
   border-radius: 8px;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   font-weight: 600;
   cursor: pointer;
@@ -418,7 +418,7 @@
 }
 
 .create-update-modal-dropdown li {
-  padding: 6px 0;
+  padding: 6px 12px;
   transition: 0.3s;
   display: flex;
   align-items: center;
@@ -453,9 +453,8 @@
 }
 .create-update-modal-dropdown li h4 {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--neutrals-800);
-  margin-left: 36px;
 }
 .create-update-modal-dropdown li.disabled {
   pointer-events: none;

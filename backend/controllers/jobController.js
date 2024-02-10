@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const Job = require("../models/jobModel");
 
-//@ Get all jons
+//@ Get all jobs
 //@route GET /api/jobs
 //@access public
 const getJobs = asyncHandler(async (req, res) => {

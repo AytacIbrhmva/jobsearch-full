@@ -58,6 +58,10 @@ const JobModal = () => {
             }}
           >
             <div className="create-update-modal-form">
+              <Department
+                jobModalData={modalData.data}
+                handleChange={handleChange}
+              />
               {inputNameArr1.map((name, index) => (
                 <InputField
                   key={index}
@@ -66,10 +70,6 @@ const JobModal = () => {
                   handleChange={handleChange}
                 />
               ))}
-              <Department
-                jobModalData={modalData.data}
-                handleChange={handleChange}
-              />
             </div>
           </Box>
 
@@ -89,7 +89,7 @@ const JobModal = () => {
 
           {modalData.data?._id && (
             <div className="joined-time">
-              Qoşuldu: {moment(modalData.data.createdAt).format("YYYY.MM.DD")}
+              Created: {moment(modalData.data.createdAt).format("YYYY.MM.DD")}
             </div>
           )}
           {showDeleteModal && (
