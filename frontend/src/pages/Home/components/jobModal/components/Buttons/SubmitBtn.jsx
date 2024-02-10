@@ -12,14 +12,14 @@ const SubmitBtn = ({ funcType, setShowDeleteModal, jobModalData }) => {
   const searchValue = useSelector(state => state.jobs.search);
   const createJob = async () => {
     // const { data } = await axios.post(
-    //   `https://job-search-server-new.vercel.app/api/jobs/`,
+    //   `https://jobsearch-backend-app.vercel.app/api/jobs/`,
     //   jobModalData
     // );
     dispatch(createJobAction(jobModalData));
   };
   const updateJob = async () => {
     const { data } = await axios.put(
-      `https://job-search-server-new.vercel.app/api/jobs/${jobModalData._id}`,
+      `https://jobsearch-backend-app.vercel.app/api/jobs/${jobModalData._id}`,
       jobModalData
     );
     dispatch(fetchJobs({department: "", sort: "",  searchQuery: searchValue || ''}));
