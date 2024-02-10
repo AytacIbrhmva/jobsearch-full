@@ -6,21 +6,36 @@ import {
   createJobAction,
   setModalData,
 } from "../../../../../../redux/slices/jobsSlice";
+import { useState } from "react";
 
 const SubmitBtn = ({ funcType, setShowDeleteModal, jobModalData }) => {
   const dispatch = useDispatch();
-  const searchValue = useSelector(state => state.jobs.search);
+  const searchValue = useSelector((state) => state.jobs.search);
+  const [loading, setLoading] = useState(false);
   const createJob = async () => {
-    await axios.post(`https://jobsearch-backend-app.vercel.app/api/jobs/`, jobModalData);
-    dispatch(fetchJobs({department: "", sort: "",  searchQuery: searchValue || ''}));
+    await axios.post(
+      `https://jobsearch-backend-app.vercel.app/api/jobs/`,
+      jobModalData
+    );
+    dispatch(
+      fetchJobs({ department: "", sort: "", searchQuery: searchValue || "" })
+    );
     dispatch(setModalData({ data: "", openModal: false }));
+    setLoading(false);
   };
   const updateJob = async () => {
-    await axios.put(`https://jobsearch-backend-app.vercel.app/api/jobs/${jobModalData._id}`, jobModalData);
-    dispatch(fetchJobs({department: "", sort: "",  searchQuery: searchValue || ''}));
+    await axios.put(
+      `https://jobsearch-backend-app.vercel.app/api/jobs/${jobModalData._id}`,
+      jobModalData
+    );
+    dispatch(
+      fetchJobs({ department: "", sort: "", searchQuery: searchValue || "" })
+    );
     dispatch(setModalData({ data: "", openModal: false }));
+    setLoading(false);
   };
   const jobCreate = () => {
+    setLoading(true);
     if (funcType === "update") {
       updateJob();
     } else {
@@ -33,7 +48,7 @@ const SubmitBtn = ({ funcType, setShowDeleteModal, jobModalData }) => {
       {funcType === "update" ? (
         <div className="create-update-modal-btn update ">
           <button onClick={jobCreate}>
-            {funcType === "update" ? "Update" : "Create"}
+            {loading ? "Loading..." : "Update"}
           </button>
           <div className="delete-income-modal-btn">
             <DeleteIcon onClick={() => setShowDeleteModal(true)} />
@@ -48,7 +63,7 @@ const SubmitBtn = ({ funcType, setShowDeleteModal, jobModalData }) => {
       ) : (
         <div className="create-update-modal-btn">
           <button onClick={jobCreate}>
-            {funcType === "update" ? "Update" : "Create"}
+            {loading ? "Loading..." : "Create"}
           </button>
         </div>
       )}
