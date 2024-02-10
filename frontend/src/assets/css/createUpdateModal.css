@@ -312,6 +312,10 @@
   transition: 0.3s;
   height: 41px;
 }
+.create-update-modal-btn .err-message {
+  color: red;
+  font-size: 12px;
+}
 
 .create-update-modal-btn button:nth-child(1):hover {
   background-color: var(--primary-700);
