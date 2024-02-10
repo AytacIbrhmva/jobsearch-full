@@ -1,0 +1,681 @@
+/* CREATE UPDATE MODAL */
+.create-update-modal-con {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.create-update-modal {
+  width: 448px;
+  max-height: 80%;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px;
+}
+
+.create-update-modal-head h2 {
+  color: var(--neutrals-900);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.create-update-modal-head svg {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.create-update-modal-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.create-update-modal-form .char-length {
+  color: var(--neutrals-900);
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+.create-update-modal-form .css-iebv7f-MuiFormControl-root-MuiTextField-root {
+  margin: 0;
+}
+.create-update-modal-form .css-194lros-MuiFormControl-root-MuiTextField-root {
+  margin-top: 24px;
+}
+
+.create-update-modal-form .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: var(--neutrals-500);
+}
+.create-update-modal-form .radio-sector-title {
+  color: var(--neutrals-900);
+  font-size: 12px;
+  font-weight: 400;
+}
+.create-update-modal-form .radio-sector-con {
+  display: flex;
+  margin-top: 4px;
+}
+.create-update-modal-form .radio-sector-con.department label {
+  margin-right: 28px;
+}
+.create-update-modal-form .radio-sector-con.department label:last-child {
+  margin-right: 0;
+}
+.create-update-modal-form .radio-sector-con label {
+  display: flex;
+  align-items: center;
+  color: var(--neutrals-900);
+  font-size: 16px;
+  font-weight: 400;
+}
+.create-update-modal-form .radio-sector-con label input {
+  width: 20px;
+  height: 20px;
+  accent-color: #462aff;
+}
+.create-update-modal-form .radio-sector-con label input[type="radio"] {
+  margin-right: 8px;
+}
+.create-update-modal-form .radio-sector-con label input[type="checkbox"] {
+  margin-right: 4px;
+}
+/* MARITAL STATUS */
+.create-update-modal-form .marital-status {
+  margin-bottom: 24px;
+}
+.create-update-modal-form .marital-status .radio-sector-con,
+.create-update-modal-form .payment-method .radio-sector-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.create-update-modal-form .marital-status .input-box,
+.create-update-modal-form .payment-method .input-box {
+  display: flex;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--neutrals-500);
+}
+.create-update-modal-form
+  .marital-status
+  .input-box:first-child
+  .create-update-modal-form
+  .payment-method
+  .input-box:first-child {
+  margin-right: 4px;
+}
+.create-update-modal-form .marital-status .input-box:last-child,
+.create-update-modal-form .payment-method .input-box:last-child {
+  margin-left: 4px;
+}
+/* MARITAL STATUS END */
+.create-update-modal-form .input-couples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.create-update-modal-form .class-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.create-update-modal-form .class-field {
+  display: flex;
+  position: relative;
+}
+.create-update-modal-form .class-field.search {
+  align-items: center;
+}
+.create-update-modal-form .class-field.search .search-icon {
+  position: absolute;
+  bottom: 12.5px;
+  left: 10px;
+  z-index: 1;
+  cursor: pointer;
+}
+.create-update-modal-form .class-field.courses {
+  align-items: flex-end;
+}
+.create-update-modal-form .class-field.courses > .left {
+  position: relative;
+  width: 100%;
+}
+.create-update-modal-form .class-field.courses > .left .input-box {
+  position: relative;
+}
+.create-update-modal-form .class-field.courses > .right {
+  height: 50.25px;
+  margin-left: 12px;
+}
+.create-update-modal-form .class-field .dropdown-icon {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  cursor: pointer;
+}
+.create-update-modal-form
+  .class-input.disabled
+  .class-field
+  .dropdown-icon
+  svg
+  path {
+  stroke: #9a9a9a;
+}
+.create-update-modal-form .add-class {
+  background-color: white;
+  color: #462aff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  cursor: pointer;
+  /* margin: 30px 10px 0 20px; */
+  transition: 0.3s;
+  height: 50.25px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-500);
+  padding: 11px 12px;
+  /* color: var(--primary-500);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid var(--primary-500);
+  padding: 11px 12px; */
+}
+
+.create-update-modal-form .add-class svg {
+  font-size: 24px;
+}
+
+.create-update-modal-form .add-class:hover {
+  color: #3226f8;
+}
+.create-update-modal-form .add-class:disabled {
+  color: #b29bff;
+  border-color: #b29bff;
+  background-color: white;
+  cursor: unset;
+}
+
+.create-update-modal-form .validation-err-message {
+  font-size: 11px;
+  color: red;
+  margin-top: 5px;
+  display: block;
+}
+.create-update-modal-form .validation-err-message.courses {
+  position: absolute;
+  bottom: -16px;
+}
+.create-update-modal-form .validation-err-message.sector {
+  transform: translateY(-19px);
+}
+.create-update-modal-con.bonus-modal .bonus-update-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 24px;
+}
+.create-update-modal-con.bonus-modal .bonus-update-icons button {
+  margin: 0;
+}
+
+.create-update-modal-con.bonus-modal .bonus-update-icons svg {
+  /* margin-top: 24px; */
+  cursor: pointer;
+}
+.create-update-modal-con.bonus-modal
+  .bonus-update-icons
+  .delete-feedback-modal-btn-mobile {
+  display: none;
+  cursor: pointer;
+  margin-top: 8px;
+  background: var(--error-50, #ffebee);
+  color: var(--error-600);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 8px;
+  width: 100%;
+}
+.create-update-modal-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-update-modal-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.create-update-modal-btn button .loading-in-modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create-update-modal-btn.update {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-top: 24px;
+}
+.create-update-modal-btn.update button:nth-child(1) {
+  margin: 0;
+}
+.create-update-modal-btn.update svg {
+  cursor: pointer;
+}
+.create-update-modal-course-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.create-update-modal-course-btn button {
+  background-color: #462aff;
+  padding: 8px 24px;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: 0.3s;
+}
+
+.create-update-modal-btn button {
+  background-color: var(--primary-500);
+  /* padding: 8px 36px; */
+  padding: 8px 24px;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: 0.3s;
+  height: 41px;
+}
+
+.create-update-modal-btn button:nth-child(1):hover {
+  background-color: var(--primary-700);
+}
+.create-update-modal-btn button:disabled:nth-child(1):hover {
+  background-color: #b29bff;
+}
+
+.create-update-modal-btn button:disabled {
+  background-color: #b29bff;
+  cursor: unset;
+}
+
+.create-update-modal .category-list {
+  margin-top: 16px;
+  position: relative;
+}
+.create-update-modal .category-list.courses-li {
+  margin-bottom: 8px;
+}
+.create-update-modal .category-list li {
+  display: flex;
+  justify-content: space-between;
+  width: 84%;
+  color: #1e1e1e;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+.create-update-modal .category-list.courses-li li {
+  flex-direction: column;
+  width: 100%;
+}
+.create-update-modal .category-list.courses-li li .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 84%;
+}
+/* .create-update-modal .category-list.courses-li li .bottom {
+
+} */
+
+.create-update-modal .category-list li:last-child {
+  margin-bottom: 0;
+}
+
+.create-update-modal .category-list li .minus-icon-con {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.create-update-modal .category-list li .minus-icon-con .minus-icon {
+  cursor: pointer;
+}
+
+.create-update-modal .category-error-message {
+  font-size: 10px;
+  color: red;
+  position: absolute;
+  top: -14px;
+}
+
+.create-update-modal-dropdown {
+  background: #ffffff;
+  border: 0.4px solid #dddddd;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 8px 0;
+  width: 100%;
+  max-height: 210px;
+  overflow-y: auto;
+  position: absolute;
+  top: 75px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.student-modal .create-update-modal-dropdown {
+  max-height: 151px;
+}
+
+.create-update-modal-dropdown.where-coming {
+  width: 100%;
+  max-height: 150px;
+}
+
+.create-update-modal-dropdown.where-from {
+  width: 100%;
+  max-height: 160px;
+}
+
+.create-update-modal-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.create-update-modal-dropdown li {
+  padding: 6px 0;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.create-update-modal-dropdown li.loading {
+  justify-content: center;
+}
+.create-update-modal-dropdown li .more-btn {
+  padding: 6px 14px;
+  background-color: var(--primary-500);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.create-update-modal-dropdown li:hover {
+  background-color: var(--primary-50);
+}
+.create-update-modal-dropdown h4:focus {
+  background-color: var(--primary-100);
+}
+.create-update-modal-dropdown li svg {
+  position: absolute;
+  margin-left: 10px;
+}
+.create-update-modal-dropdown li h4 {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--neutrals-800);
+  margin-left: 36px;
+}
+.create-update-modal-dropdown li.disabled {
+  pointer-events: none;
+}
+.create-update-modal-dropdown li.disabled:hover {
+  background-color: transparent;
+}
+.create-update-modal-dropdown li.disabled h4 {
+  pointer-events: none;
+  color: var(--neutrals-500);
+  user-select: none;
+}
+.create-update-modal-dropdown.feedback li h4 {
+  margin-left: 10px;
+}
+
+.create-update-modal-btn-con {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: flex-end; */
+  align-items: center;
+}
+
+.create-update-modal-btn-con .modal-status {
+  display: flex;
+}
+.create-update-modal-btn-con .modal-status li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  border: 1px solid var(--neutrals-300);
+  background-color: var(--neutrals-100);
+}
+.create-update-modal-btn-con .modal-status li:nth-child(1) {
+  border-radius: 8px 0 0 8px;
+  padding: 8px 18px;
+}
+.create-update-modal-btn-con .modal-status li:nth-child(2) {
+  border-radius: 0 8px 8px 0;
+  padding: 8px 12px;
+}
+.create-update-modal-btn-con .modal-status li.active {
+  color: white;
+  border-color: #2a78ff;
+  background-color: #2a78ff;
+}
+.create-update-modal-btn-con button {
+  margin-top: 0;
+}
+.create-update-modal .salary-input {
+  position: relative;
+}
+.create-update-modal .salary-input .salary-dropdown {
+  position: absolute;
+  right: 0;
+  /* bottom: 16.5px; */
+  top: 24px;
+}
+.create-update-modal .salary-input .salary-dropdown .dropdown-head {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 14px;
+}
+.create-update-modal .salary-input .salary-dropdown .dropdown-head .divider {
+  height: 50.25px;
+  width: 1px;
+  background: #9a9a9a;
+  margin: 0 12px;
+}
+.create-update-modal .salary-input .salary-dropdown .dropdown-head label {
+  color: var(--neutrals-900);
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 8px;
+}
+.create-update-modal .salary-input .salary-dropdown .dropdown-head .arrow-icon {
+  transition: 0.3s;
+  transform: rotate(0deg);
+}
+.create-update-modal
+  .salary-input
+  .salary-dropdown.active
+  .dropdown-head
+  .arrow-icon {
+  transform: rotate(180deg);
+}
+.create-update-modal .salary-input .salary-dropdown .dropdown-body {
+  background: #ffffff;
+  border: 0.4px solid #dddddd;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+  width: 100%;
+  max-height: 210px;
+  overflow-y: auto;
+  position: absolute;
+  top: 58px;
+  right: 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+.create-update-modal .salary-input .salary-dropdown.active .dropdown-body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.create-update-modal .salary-input .salary-dropdown .dropdown-body li {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--neutrals-800);
+  padding: 4px 6px;
+  cursor: pointer;
+}
+.create-update-modal .password-input {
+  position: relative;
+  width: 100%;
+}
+.create-update-modal .password-input .modal-view-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 37px;
+  right: 20px;
+}
+.create-update-modal-btn .delete-income-modal-btn-mobile {
+  display: none;
+}
+.create-update-modal .joined-time {
+  font-weight: 500;
+  font-size: 16px;
+  color: #717171;
+  text-align: center;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 800px) {
+  .create-update-modal {
+    width: 420px;
+  }
+  .create-update-modal .category-list li {
+    width: 81%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .create-update-modal {
+    width: 100%;
+    border: none;
+    padding: 16px;
+    max-height: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .create-update-modal-btn.update {
+    flex-direction: column;
+  }
+  .create-update-modal-form .input-couples {
+    grid-template-columns: auto;
+    gap: 0;
+  }
+  .create-update-modal-btn {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .create-update-modal-btn button {
+    width: 100%;
+  }
+  .create-update-modal-btn-con {
+    display: block;
+  }
+  .create-update-modal-btn-con .modal-status {
+    width: 100%;
+  }
+  .create-update-modal-btn-con .modal-status li {
+    width: 50%;
+  }
+  .create-update-modal-btn .delete-income-modal-btn {
+    display: none;
+  }
+  .create-update-modal-btn .delete-income-modal-btn-mobile {
+    margin-top: 8px;
+    background: var(--error-50, #ffebee);
+    color: var(--error-600);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .teacher-modal
+    .create-update-modal-form
+    .birthday-input
+    .css-rniwbm-MuiFormControl-root-MuiTextField-root {
+    margin-top: 24px;
+  }
+
+  .create-update-modal-con.bonus-modal .bonus-update-icons svg {
+    margin-top: 24px;
+  }
+  .create-update-modal-btn .delete-income-modal-btn-mobile {
+    display: block;
+  }
+
+  .create-update-modal-con.bonus-modal
+    .bonus-update-icons
+    .delete-feedback-modal-btn {
+    display: none;
+  }
+  .create-update-modal-con.bonus-modal
+    .bonus-update-icons
+    .delete-feedback-modal-btn-mobile {
+    display: block;
+  }
+  .create-update-modal-con.bonus-modal .bonus-update-icons {
+    flex-direction: column;
+  }
+}

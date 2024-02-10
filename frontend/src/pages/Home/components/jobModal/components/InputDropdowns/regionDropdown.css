@@ -1,0 +1,35 @@
+.where-from>li {
+    flex-direction: column;
+}
+.where-from>li:hover {
+    background-color: transparent;
+}
+.where-from>li h4 {
+    font-weight: 700;
+}
+.where-from li .where-form-parts-con {
+    position: static;
+    width: 100%;
+    /* opacity: 1;
+    visibility: visible;
+    transform: translateY(0);   */
+    background-color: aliceblue;
+}
+.region-dropdown-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 6px 6px 0;
+    cursor: text;
+}
+.region-dropdown-head svg {
+    position: static !important; 
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+}
+.where-from li .where-form-parts-con li h4  {
+    font-size: 14px;
+    font-weight: 500;
+}

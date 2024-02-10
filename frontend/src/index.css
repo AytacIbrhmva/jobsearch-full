@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+
+body {
+    height: 100%;
+    background-color: rgb(246, 246, 246);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+:root {
+    --primary-900: #0005e7;
+    --primary-800: #0018eb;
+    --primary-700: #001ef0;
+    --primary-600: #3226f8;
+    --primary-500: #462aff;
+    --primary-400: #704eff;
+    --primary-300: #8f70ff;
+    --primary-200: #b29bff;
+    --primary-100: #d2c3fe;
+    --primary-50: #eee6ff;
+  
+    --secondary-900: #0060a1;
+    --secondary-800: #0080c2;
+    --secondary-700: #0091d6;
+    --secondary-600: #05a5ea;
+    --secondary-500: #0ab3f9;
+    --secondary-400: #31bff9;
+    --secondary-300: #55cbf9;
+    --secondary-200: #85dafb;
+    --secondary-100: #b5e8fc;
+    --secondary-50: #e2f6fe;
+  
+    --tertiary-900: #f9710f;
+    --tertiary-800: #fa8f12;
+    --tertiary-700: #fba013;
+    --tertiary-600: #fbb216;
+    --tertiary-500: #fbc01c;
+    --tertiary-400: #fcc931;
+    --tertiary-300: #fcd454;
+    --tertiary-200: #fddf84;
+    --tertiary-100: #feecb4;
+    --tertiary-50: #fef8e2;
+  
+    --error-900: #c31a0e;
+    --error-800: #d1281d;
+    --error-700: #de3025;
+    --error-600: #f03b2a;
+    --error-500: #ff462a;
+    --error-400: #fa5548;
+    --error-300: #ef756e;
+    --error-200: #f79c97;
+    --error-100: #ffced1;
+    --error-50: #ffebee;
+  
+    --neutrals-900: #1e1e1e;
+    --neutrals-800: #3f3f3f;
+    --neutrals-700: #5d5d5d;
+    --neutrals-600: #717171;
+    --neutrals-500: #9a9a9a;
+    --neutrals-400: #b9b9b9;
+    --neutrals-300: #dddddd;
+    --neutrals-200: #ececec;
+    --neutrals-100: #f4f4f4;
+    --neutrals-50: #f9f9f9;
+  }
