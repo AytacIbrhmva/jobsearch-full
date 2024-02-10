@@ -17,11 +17,12 @@
                 list-style: none;
                 gap: 30px; 
                 li {
-                    a {
+                    a, p {
                         color: rgb(86, 86, 86);
                         font-size: 14px;
                         transition: .2s;
                         font-weight: 600; 
+                        cursor: pointer;
                         &:hover {
                             color: rgb(9, 222, 108);
                         } 

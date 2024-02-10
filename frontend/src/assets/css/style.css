@@ -36,13 +36,14 @@
   list-style: none;
   gap: 30px;
 }
-.header .container .desktop-nav ul li a {
+.header .container .desktop-nav ul li a, .header .container .desktop-nav ul li p {
   color: rgb(86, 86, 86);
   font-size: 14px;
   transition: 0.2s;
   font-weight: 600;
+  cursor: pointer;
 }
-.header .container .desktop-nav ul li a:hover {
+.header .container .desktop-nav ul li a:hover, .header .container .desktop-nav ul li p:hover {
   color: rgb(9, 222, 108);
 }
 .header .container .desktop-nav ul li a.active {
@@ -57,13 +58,14 @@
   list-style: none;
   gap: 30px;
 }
-.header .container .mobile .mobile-nav ul li a {
+.header .container .mobile .mobile-nav ul li a, .header .container .mobile .mobile-nav ul li p {
   color: rgb(86, 86, 86);
   font-size: 14px;
   transition: 0.2s;
   font-weight: 600;
+  cursor: pointer;
 }
-.header .container .mobile .mobile-nav ul li a:hover {
+.header .container .mobile .mobile-nav ul li a:hover, .header .container .mobile .mobile-nav ul li p:hover {
   color: rgb(9, 222, 108);
 }
 .header .container .mobile .mobile-nav ul li a.active {
