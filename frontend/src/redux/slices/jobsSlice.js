@@ -14,14 +14,14 @@ const initialState = {
 export const fetchJobs = createAsyncThunk("fetchJobs", async ({department, sort, searchQuery}) => {
 //   const response = await axios.get('https://jobsearch-json-server-deploy.onrender.com/jobList');
 //   return response.data;
-  const {data} = await axios.get(`https://jobsearch-backend-app.vercel.app/api/jobs/?department=${department}&sort=${sort}&searchQuery=${searchQuery}`);
+  const {data} = await axios.get(`${process.env.REACT_APP_API}/api/jobs/?department=${department}&sort=${sort}&searchQuery=${searchQuery}`);
   return data;
 });
 
 export const createJobAction = createAsyncThunk("createJobAction", async (modalData) => {
   //   const response = await axios.get('https://jobsearch-json-server-deploy.onrender.com/jobList');
   //   return response.data;
-    const {data} = await axios.post(`https://jobsearch-backend-app.vercel.app/api/jobs/`, modalData);
+    const {data} = await axios.post(`${process.env.REACT_APP_API}/api/jobs/`, modalData);
     return data;
   });
 

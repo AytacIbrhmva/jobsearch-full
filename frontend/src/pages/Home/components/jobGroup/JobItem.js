@@ -19,7 +19,7 @@ function Single({ job }) {
   }
   const deleteJob = async () => {
     const { data } = await axios.delete(
-      `https://jobsearch-backend-app.vercel.app/api/jobs/${job._id}`
+      `${process.env.REACT_APP_API}/api/jobs/${job._id}`
     );
     dispatch(fetchJobs({department: "", sort: "", searchQuery: searchValue || ''}));
   };
