@@ -11,12 +11,12 @@ const SubmitBtn = ({ funcType, setShowDeleteModal, jobModalData }) => {
   const dispatch = useDispatch();
   const searchValue = useSelector(state => state.jobs.search);
   const createJob = async () => {
-    await axios.post(`${process.env.REACT_APP_API}/api/jobs/`, jobModalData);
+    await axios.post(`https://jobsearch-backend-app.vercel.app/api/jobs/`, jobModalData);
     dispatch(fetchJobs({department: "", sort: "",  searchQuery: searchValue || ''}));
     dispatch(setModalData({ data: "", openModal: false }));
   };
   const updateJob = async () => {
-    await axios.put(`${process.env.REACT_APP_API}/api/jobs/${jobModalData._id}`, jobModalData);
+    await axios.put(`https://jobsearch-backend-app.vercel.app/api/jobs/${jobModalData._id}`, jobModalData);
     dispatch(fetchJobs({department: "", sort: "",  searchQuery: searchValue || ''}));
     dispatch(setModalData({ data: "", openModal: false }));
   };
