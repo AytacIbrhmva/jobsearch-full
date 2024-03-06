@@ -22,7 +22,7 @@ export default function Header() {
             src="https://freesvg.org/img/AnimalSilhouettes2-Penguin.png"
             alt="logo"
           />
-          Unemployed
+          employed
         </Link>
         <nav className="desktop-nav">
           <ul>
